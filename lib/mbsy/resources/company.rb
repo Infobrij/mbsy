@@ -4,12 +4,6 @@ module Mbsy
       call('get')
     end
 
-    def self.get_details
-      warn '[DEPRECATED] `get_details` is deprecated.' +
-           'Please use `details` instead.'
-      details
-    end
-
     def self.stats
       call('stats')
     end
