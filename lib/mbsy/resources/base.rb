@@ -10,7 +10,7 @@ module Mbsy
     include HTTParty
     format :json
     default_timeout 30
-    default_params :output => 'json'
+    default_params output: 'json'
 
     def self.element_name
       name.split(/::/).last.underscore
@@ -19,9 +19,9 @@ module Mbsy
     def self.api_url(method)
       Mbsy.site_uri + self.element_name + '/' + method
     end
- 
+
     def self.call(method, params = {})
-      response = JSON.parse(self.get(api_url(method), :query => params).body)['response']
+      response = JSON.parse(self.get(api_url(method), query: params).body)['response']
       case response['code']
       when '200' # Nothing to do here...
       when '400'
