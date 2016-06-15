@@ -18,18 +18,6 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-
-```
-$ gem install mbsy
-```
-
-If you're using Rails 2 you could include this gem in your configuration, i.e. in `environment.rb`
-
-```ruby
-config.gem 'mbsy'
-```
-
 ## Usage
 
 Make sure you include your api credentials in an initializer.
@@ -51,15 +39,15 @@ Some examples:
 
 ```ruby
 # Add 50 to user account
-Mbsy::Balance.update(:add,{:email => 'example@example.com', :amount => 50})
+Mbsy::Balance.add(email: 'example@example.com', amount: 50)
 
 # Deduct 25 from user account
-Mbsy::Balance.update(:deduct,{:email => 'example@example.com', :amount => 25})
+Mbsy::Balance.deduct(email: 'example@example.com', amount: 25)
 
 # Get company details
 Mbsy::Company.get_details
 
-# Register a referral event 
+# Register a referral event
 # Note the email address is the new customer email, not the ambassador
 # Autocreate flag sets whether they are created as a new ambassador or not
 Mbsy::Event.create(email: 'example@example.com', short_code: REFERRALSHORTCODE, campaign_uid:  YOURCAMPAIGNUID, auto_create: 0)
@@ -85,7 +73,7 @@ Mbsy::SingleSignOn.embed_html(email: current_user.email, method: :logout)
 ```
 
 ## Contributing to mbsy
- 
+
 - Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 - Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 - Fork the project.
@@ -101,4 +89,3 @@ Mbsy::SingleSignOn.embed_html(email: current_user.email, method: :logout)
 ## Copyright
 
 Copyright (c) 2014 ZFERRAL, INC. See LICENSE for further details.
-
