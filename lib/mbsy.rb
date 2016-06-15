@@ -1,16 +1,10 @@
 require 'cgi'
 require 'httparty'
 require 'json'
-require 'mbsy/resources/base'
-require 'mbsy/resources/ambassador'
-require 'mbsy/resources/commission'
-require 'mbsy/resources/balance'
-require 'mbsy/resources/company'
-require 'mbsy/resources/event'
-require 'mbsy/resources/group'
-require 'mbsy/resources/shortcode'
-require 'mbsy/resources/social'
-require 'mbsy/util/single_sign_on'
+
+require 'mbsy/resources'
+require 'mbsy/utils'
+require 'mbsy/deprecations'
 
 module Mbsy
   class << self
