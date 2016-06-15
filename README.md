@@ -32,7 +32,7 @@ config.gem 'mbsy'
 
 ## Usage
 
-Make sure you include your api credentials in an initialiser.
+Make sure you include your api credentials in an initializer.
 
 ```ruby
 Mbsy.configure do |c|
