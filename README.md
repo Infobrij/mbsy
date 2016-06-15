@@ -45,7 +45,7 @@ Mbsy::Balance.add(email: 'example@example.com', amount: 50)
 Mbsy::Balance.deduct(email: 'example@example.com', amount: 25)
 
 # Get company details
-Mbsy::Company.get_details
+Mbsy::Company.details
 
 # Register a referral event
 # Note the email address is the new customer email, not the ambassador

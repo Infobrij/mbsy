@@ -1,7 +1,13 @@
 module Mbsy
   class Company < Base
-    def self.get_details
+    def self.details
       call('get')
+    end
+
+    def self.get_details
+      warn '[DEPRECATED] `get_details` is deprecated.' +
+           'Please use `details` instead.'
+      details
     end
 
     def self.stats
